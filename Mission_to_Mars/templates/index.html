@@ -51,23 +51,23 @@
         </table>
     </div>
 
-    <!--hemosphere images-->
+    <!--hemisphere images-->
     <div class="row">
       <div class="col-md-12">
-        <h2>Mars Hemospheres</h2>
+        <h2>Mars Hemispheres</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-md-5">
         {% for ea in range(0,2) %}
         <h4 class="heading">{{site_data[0]['hemosphere_images'][ea]['title']}}</h4>
-        <img src={{site_data[0]['hemosphere_images'][ea]['url']}} width='100%'>
+        <img src={{site_data[0]['hemisphere_images'][ea]['url']}} width='100%'>
         {% endfor %}
       </div>
       <div class="col-md-5">
         {% for ea in range(2,4) %}
         <h4 class="heading">{{site_data[0]['hemosphere_images'][ea]['title']}}</h4>
-        <img src={{site_data[0]['hemosphere_images'][ea]['url']}} width='100%'>
+        <img src={{site_data[0]['hemisphere_images'][ea]['url']}} width='100%'>
         {% endfor %}
       </div>
     </div>

@@ -80,7 +80,7 @@ def scrape():
     for ea in descs:
         links.append(f"https://astrogeology.usgs.gov{ea.find('a')['href']}")
 
-    hemosphere_images = []
+    hemisphere_images = []
 
     for ea in links:
         hemosphere_image = {}
@@ -89,14 +89,14 @@ def scrape():
         browser.visit(url)
         html = browser.html
         soup = BeautifulSoup(html, "html.parser")
-        hemosphere_image['title'] = soup.find('title').text.split(' Enhanced')[0]
-        hemosphere_image['url'] = soup.find('li').find('a')['href']
-        hemosphere_images.append(hemosphere_image)
+        hemisphere_image['title'] = soup.find('title').text.split(' Enhanced')[0]
+        hemisphere_image['url'] = soup.find('li').find('a')['href']
+        hemisphere_images.append(hemisphere_image)
         browser.quit()
 
     browser.quit()
 
-    site_data['hemosphere_images'] = hemosphere_images
+    site_data['hemisphere_images'] = hemisphere_images
 
 
     #Send to Mongo
