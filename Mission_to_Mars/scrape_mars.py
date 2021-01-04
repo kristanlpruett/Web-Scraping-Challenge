@@ -67,7 +67,7 @@ def scrape():
 
     browser.quit()
 
-    #Scrape hemosphere images
+    #Scrape hemisphere images
     browser = init_browser()
 
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -83,7 +83,7 @@ def scrape():
     hemisphere_images = []
 
     for ea in links:
-        hemosphere_image = {}
+        hemisphere_image = {}
         browser = init_browser()
         url = ea
         browser.visit(url)
